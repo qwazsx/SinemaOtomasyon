@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D8AD0B6-B36A-4897-B3DC-F334FF16271B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SINEMA</RootNamespace>
+    <AssemblyName>SINEMA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan.Designer.cs">
+      <DependentUpon>Calisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Film Kategori İşlemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Film Kategori İşlemleri.Designer.cs">
+      <DependentUpon>Film Kategori İşlemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Film İşlemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Film İşlemleri.Designer.cs">
+      <DependentUpon>Film İşlemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmSeansSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmSeansSalon.Designer.cs">
+      <DependentUpon>FilmSeansSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salon.Designer.cs">
+      <DependentUpon>Salon.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan.resx">
+      <DependentUpon>Calisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Film Kategori İşlemleri.resx">
+      <DependentUpon>Film Kategori İşlemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Film İşlemleri.resx">
+      <DependentUpon>Film İşlemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmSeansSalon.resx">
+      <DependentUpon>FilmSeansSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Salon.resx">
+      <DependentUpon>Salon.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resimler\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resimler\administrator1.ico" />
+    <Content Include="Resimler\btnBiletAl.png" />
+    <Content Include="Resimler\btnGiris.png" />
+    <Content Include="Resimler\camera105.png" />
+    <None Include="Resimler\cinema.jpg" />
+    <Content Include="Resimler\Form1-icon.ico" />
+    <Content Include="Resimler\kltSatildi.png" />
+    <Content Include="Resimler\kltSec.png" />
+    <Content Include="Resimler\kltSenin.png" />
+    <Content Include="Resimler\login7.ico" />
+    <Content Include="Resimler\perde.png" />
+    <Content Include="Resimler\picGirisBackround.png" />
+    <Content Include="Resimler\picTopBackround.png" />
+    <Content Include="Resimler\screen1.png" />
+    <Content Include="Resimler\screen2.png" />
+    <Content Include="Resimler\screen3.png" />
+    <Content Include="Resimler\screen4.png" />
+    <Content Include="Resimler\screen5.png" />
+    <Content Include="Resimler\screen6.png" />
+    <Content Include="Resimler\screen7.png" />
+    <Content Include="Resimler\top-container-bg.png" />
+    <Content Include="Resimler\TopPanel.png" />
+    <Content Include="Resimler\users53.ico" />
+    <None Include="Resources\btnGiris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{6d8c7c8c-de0e-4e60-99a1-373d83d5a42b}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY_LAYER\EntityLayer.csproj">
+      <Project>{7925ec6a-85f7-489b-8930-e415dd86386a}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FacadeLayer\FacadeLayer.csproj">
+      <Project>{9b542eec-505a-4007-998b-495fbdd5fe43}</Project>
+      <Name>FacadeLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

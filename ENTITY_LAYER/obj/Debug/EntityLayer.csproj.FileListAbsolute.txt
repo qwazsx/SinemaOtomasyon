@@ -1,0 +1,16 @@
+D:\C#_Projeleri\SINEMA\ENTITY_LAYER\bin\Debug\ENTITY_LAYER.dll
+D:\C#_Projeleri\SINEMA\ENTITY_LAYER\bin\Debug\ENTITY_LAYER.pdb
+D:\C#_Projeleri\SINEMA\ENTITY_LAYER\obj\Debug\ENTITY_LAYER.dll
+D:\C#_Projeleri\SINEMA\ENTITY_LAYER\obj\Debug\ENTITY_LAYER.pdb
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\ENTITY_LAYER.dll
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\ENTITY_LAYER.pdb
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\mscorlib.dll
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\tr\mscorlib.resources.dll
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\normidna.nlp
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\normnfc.nlp
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\normnfd.nlp
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\normnfkc.nlp
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\bin\Debug\normnfkd.nlp
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\obj\Debug\EntityLayer.csprojResolveAssemblyReference.cache
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\obj\Debug\ENTITY_LAYER.dll
+C:\Users\Mortal\Desktop\Sinema\ENTITY_LAYER\obj\Debug\ENTITY_LAYER.pdb
