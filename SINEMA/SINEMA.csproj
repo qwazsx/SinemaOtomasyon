@@ -90,6 +90,16 @@
     <Compile Include="Salon.Designer.cs">
       <DependentUpon>Salon.cs</DependentUpon>
     </Compile>
+    <Compile Include="SinemaOtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SinemaOtomasyonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +141,28 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resimler\Thumbs.db" />
+    <None Include="SinemaOtomasyonDataSet.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet.xss">
+      <DependentUpon>SinemaOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet1.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet1.xss">
+      <DependentUpon>SinemaOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,6 +10,20 @@ namespace BusinessLogicLayer
 {
     public class BLLBILETCI
     {
+        //Login metodu.
+        public static bool SINEMA_Login(String KullaniciAd, String Parola)
+        {
+            if (KullaniciAd != null && KullaniciAd.Trim().Length > 0 && Parola != null && Parola.Trim().Length > 0)
+            {
+                return FADMIN.SINEMA_Login(KullaniciAd, Parola);
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
 
         public static int Bilet_Insert(EBILET item)
         {

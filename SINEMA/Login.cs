@@ -25,15 +25,22 @@ namespace SINEMA
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (cmbKullaniciTipi.SelectedIndex == 0)
-            {
-
-            }
+           
         }
 
-        private void buttton1_Enter(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-
+            ekraniTemizle();
         }
+
+        private void ekraniTemizle()
+        {
+            txtKullaniciAd.Clear();
+            txtParola.Clear();
+            cmbKullaniciTipi.SelectedIndex = -1;
+        }
+        
+     
+
     }
 }
