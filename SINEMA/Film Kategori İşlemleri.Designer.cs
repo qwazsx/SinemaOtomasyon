@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtKategoriAd = new System.Windows.Forms.TextBox();
@@ -37,7 +38,15 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.sinemaOtomasyonDataSet2 = new SINEMA.SinemaOtomasyonDataSet2();
+            this.filmKategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.filmKategoriTableAdapter = new SINEMA.SinemaOtomasyonDataSet2TableAdapters.FilmKategoriTableAdapter();
+            this.kategoriIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kategoriAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genelIzleyiciDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmKategoriBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,13 +92,23 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kategoriIDDataGridViewTextBoxColumn,
+            this.kategoriAdDataGridViewTextBoxColumn,
+            this.genelIzleyiciDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.filmKategoriBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 245);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(711, 192);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // btnYaniKayit
             // 
@@ -111,6 +130,7 @@
             this.btnEkle.TabIndex = 3;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnGuncelle
             // 
@@ -121,6 +141,7 @@
             this.btnGuncelle.TabIndex = 4;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -131,6 +152,45 @@
             this.btnSil.TabIndex = 5;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // sinemaOtomasyonDataSet2
+            // 
+            this.sinemaOtomasyonDataSet2.DataSetName = "SinemaOtomasyonDataSet2";
+            this.sinemaOtomasyonDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // filmKategoriBindingSource
+            // 
+            this.filmKategoriBindingSource.DataMember = "FilmKategori";
+            this.filmKategoriBindingSource.DataSource = this.sinemaOtomasyonDataSet2;
+            // 
+            // filmKategoriTableAdapter
+            // 
+            this.filmKategoriTableAdapter.ClearBeforeFill = true;
+            // 
+            // kategoriIDDataGridViewTextBoxColumn
+            // 
+            this.kategoriIDDataGridViewTextBoxColumn.DataPropertyName = "KategoriID";
+            this.kategoriIDDataGridViewTextBoxColumn.HeaderText = "KategoriID";
+            this.kategoriIDDataGridViewTextBoxColumn.Name = "kategoriIDDataGridViewTextBoxColumn";
+            this.kategoriIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kategoriIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // kategoriAdDataGridViewTextBoxColumn
+            // 
+            this.kategoriAdDataGridViewTextBoxColumn.DataPropertyName = "KategoriAd";
+            this.kategoriAdDataGridViewTextBoxColumn.HeaderText = "KategoriAd";
+            this.kategoriAdDataGridViewTextBoxColumn.Name = "kategoriAdDataGridViewTextBoxColumn";
+            this.kategoriAdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kategoriAdDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // genelIzleyiciDataGridViewCheckBoxColumn
+            // 
+            this.genelIzleyiciDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.genelIzleyiciDataGridViewCheckBoxColumn.DataPropertyName = "GenelIzleyici";
+            this.genelIzleyiciDataGridViewCheckBoxColumn.HeaderText = "GenelIzleyici";
+            this.genelIzleyiciDataGridViewCheckBoxColumn.Name = "genelIzleyiciDataGridViewCheckBoxColumn";
+            this.genelIzleyiciDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // Film_Kategori_İşlemleri
             // 
@@ -154,6 +214,8 @@
             this.Text = "Film Kategori İşlemleri";
             this.Load += new System.EventHandler(this.Film_Kategori_İşlemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmKategoriBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +232,11 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
+        private SinemaOtomasyonDataSet2 sinemaOtomasyonDataSet2;
+        private System.Windows.Forms.BindingSource filmKategoriBindingSource;
+        private SinemaOtomasyonDataSet2TableAdapters.FilmKategoriTableAdapter filmKategoriTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriAdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn genelIzleyiciDataGridViewCheckBoxColumn;
     }
 }

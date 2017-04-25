@@ -28,16 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbSalonAd = new System.Windows.Forms.ComboBox();
             this.txtKapasite = new System.Windows.Forms.TextBox();
             this.btnYeniKayit = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sinemaOtomasyonDataSet4 = new SINEMA.SinemaOtomasyonDataSet4();
+            this.salonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salonTableAdapter = new SINEMA.SinemaOtomasyonDataSet4TableAdapters.SalonTableAdapter();
+            this.salonIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kapasiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salonAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSalonAd = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,15 +68,6 @@
             this.label2.Size = new System.Drawing.Size(120, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Salon Kapasite :";
-            // 
-            // cmbSalonAd
-            // 
-            this.cmbSalonAd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSalonAd.FormattingEnabled = true;
-            this.cmbSalonAd.Location = new System.Drawing.Point(139, 68);
-            this.cmbSalonAd.Name = "cmbSalonAd";
-            this.cmbSalonAd.Size = new System.Drawing.Size(270, 24);
-            this.cmbSalonAd.TabIndex = 0;
             // 
             // txtKapasite
             // 
@@ -96,6 +96,7 @@
             this.btnEkle.TabIndex = 3;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnGuncelle
             // 
@@ -106,6 +107,7 @@
             this.btnGuncelle.TabIndex = 4;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -116,31 +118,87 @@
             this.btnSil.TabIndex = 5;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.salonIDDataGridViewTextBoxColumn,
+            this.kapasiteDataGridViewTextBoxColumn,
+            this.salonAdDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.salonBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 227);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(665, 226);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // sinemaOtomasyonDataSet4
+            // 
+            this.sinemaOtomasyonDataSet4.DataSetName = "SinemaOtomasyonDataSet4";
+            this.sinemaOtomasyonDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // salonBindingSource
+            // 
+            this.salonBindingSource.DataMember = "Salon";
+            this.salonBindingSource.DataSource = this.sinemaOtomasyonDataSet4;
+            // 
+            // salonTableAdapter
+            // 
+            this.salonTableAdapter.ClearBeforeFill = true;
+            // 
+            // salonIDDataGridViewTextBoxColumn
+            // 
+            this.salonIDDataGridViewTextBoxColumn.DataPropertyName = "SalonID";
+            this.salonIDDataGridViewTextBoxColumn.HeaderText = "SalonID";
+            this.salonIDDataGridViewTextBoxColumn.Name = "salonIDDataGridViewTextBoxColumn";
+            this.salonIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salonIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // kapasiteDataGridViewTextBoxColumn
+            // 
+            this.kapasiteDataGridViewTextBoxColumn.DataPropertyName = "Kapasite";
+            this.kapasiteDataGridViewTextBoxColumn.HeaderText = "Kapasite";
+            this.kapasiteDataGridViewTextBoxColumn.Name = "kapasiteDataGridViewTextBoxColumn";
+            this.kapasiteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kapasiteDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // salonAdDataGridViewTextBoxColumn
+            // 
+            this.salonAdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salonAdDataGridViewTextBoxColumn.DataPropertyName = "SalonAd";
+            this.salonAdDataGridViewTextBoxColumn.HeaderText = "SalonAd";
+            this.salonAdDataGridViewTextBoxColumn.Name = "salonAdDataGridViewTextBoxColumn";
+            this.salonAdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // txtSalonAd
+            // 
+            this.txtSalonAd.Location = new System.Drawing.Point(140, 67);
+            this.txtSalonAd.Name = "txtSalonAd";
+            this.txtSalonAd.Size = new System.Drawing.Size(269, 22);
+            this.txtSalonAd.TabIndex = 0;
             // 
             // Salon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 465);
+            this.Controls.Add(this.txtSalonAd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnYeniKayit);
             this.Controls.Add(this.txtKapasite);
-            this.Controls.Add(this.cmbSalonAd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -151,6 +209,8 @@
             this.Text = "Salon";
             this.Load += new System.EventHandler(this.Salon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salonBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,12 +220,18 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbSalonAd;
         private System.Windows.Forms.TextBox txtKapasite;
         private System.Windows.Forms.Button btnYeniKayit;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private SinemaOtomasyonDataSet4 sinemaOtomasyonDataSet4;
+        private System.Windows.Forms.BindingSource salonBindingSource;
+        private SinemaOtomasyonDataSet4TableAdapters.SalonTableAdapter salonTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salonIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kapasiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salonAdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtSalonAd;
     }
 }

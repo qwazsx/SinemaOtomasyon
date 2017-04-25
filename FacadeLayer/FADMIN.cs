@@ -992,7 +992,7 @@ namespace FacadeLayer
                     while (dr.Read())
                     {
                         item.SeansID = Convert.ToInt32(dr["SeansID"]);
-                        item.SeansNo = Convert.ToInt32(dr["SeansNo"]);
+                        item.SeansNo = dr["SeansNo"].ToString();
                         item.FilmID = Convert.ToInt32(dr["FilmID"]);
                         item.SalonID = Convert.ToInt32(dr["SalonID"]);
                         item.Tarih = Convert.ToDateTime(dr["Tarih"]);
@@ -1032,7 +1032,7 @@ namespace FacadeLayer
                         ESEANS item = new ESEANS();
 
                         item.SeansID = Convert.ToInt32(dr["SeansID"]);
-                        item.SeansNo = Convert.ToInt32(dr["SeansNo"]);
+                        item.SeansNo = dr["SeansNo"].ToString();
                         item.FilmID = Convert.ToInt32(dr["FilmID"]);
                         item.SalonID = Convert.ToInt32(dr["SalonID"]);
                         item.Tarih = Convert.ToDateTime(dr["Tarih"]);

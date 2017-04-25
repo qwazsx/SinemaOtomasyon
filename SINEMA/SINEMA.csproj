@@ -100,6 +100,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SinemaOtomasyonDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SinemaOtomasyonDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SinemaOtomasyonDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SinemaOtomasyonDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SinemaOtomasyonDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SinemaOtomasyonDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SinemaOtomasyonDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinemaOtomasyonDataSet7.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +192,72 @@
     </None>
     <None Include="SinemaOtomasyonDataSet1.xss">
       <DependentUpon>SinemaOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet2.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet2.xss">
+      <DependentUpon>SinemaOtomasyonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet3.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet3.xss">
+      <DependentUpon>SinemaOtomasyonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet4.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet4.xss">
+      <DependentUpon>SinemaOtomasyonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet5.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet5.xss">
+      <DependentUpon>SinemaOtomasyonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet6.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet6.xss">
+      <DependentUpon>SinemaOtomasyonDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet7.xsc">
+      <DependentUpon>SinemaOtomasyonDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SinemaOtomasyonDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinemaOtomasyonDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SinemaOtomasyonDataSet7.xss">
+      <DependentUpon>SinemaOtomasyonDataSet7.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

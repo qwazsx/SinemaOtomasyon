@@ -16,7 +16,7 @@ namespace SINEMA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Film_İşlemleri());
+            Application.Run(new FilmSeansSalon());
         }
     }
 }

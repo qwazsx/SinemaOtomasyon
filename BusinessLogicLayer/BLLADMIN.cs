@@ -321,9 +321,9 @@ namespace BusinessLogicLayer
 
 
         //Seans işlemlerini yapan metotlar.
-        public static int Senas_Insert(ESEANS item)
+        public static int Seans_Insert(ESEANS item)
         {
-            if ((item.SeansNo > 0) && (item.FilmID > 0) && (item.SalonID > 0) && (item.Tarih != null))
+            if ((item.SeansNo != null) && (item.FilmID > 0) && (item.SalonID > 0) && (item.Tarih != null))
             {
                 return FADMIN.Seans_Insert(item);
             }
@@ -336,7 +336,7 @@ namespace BusinessLogicLayer
 
         public static bool Seans_Update(ESEANS item)
         {
-            if ((item.SeansID > 0) && (item.SeansNo > 0) && (item.FilmID > 0) && (item.SalonID > 0) && (item.Tarih != null))
+            if ((item.SeansID > 0) && (item.SeansNo != null) && (item.FilmID > 0) && (item.SalonID > 0) && (item.Tarih != null))
             {
                 return FADMIN.Seans_Update(item);
             }
@@ -360,7 +360,7 @@ namespace BusinessLogicLayer
             }
         }
 
-        public static ESEANS Senas_Select(int _SeansID)
+        public static ESEANS Seans_Select(int _SeansID)
         {
             if (_SeansID > 0)
             {

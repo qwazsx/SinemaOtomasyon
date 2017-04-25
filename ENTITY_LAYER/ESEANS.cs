@@ -9,7 +9,13 @@ namespace ENTITY_LAYER
    public class ESEANS
     {
         private int _SeansID;
-        private int _SeansNo;
+        private string _SeansNo;
+
+        public string SeansNo
+        {
+            get { return _SeansNo; }
+            set { _SeansNo = value; }
+        }
         private int _FilmID;
         private int _SalonID;
         private DateTime _Tarih;
@@ -28,18 +34,7 @@ namespace ENTITY_LAYER
             }
         }
 
-        public int SeansNo
-        {
-            get
-            {
-                return _SeansNo;
-            }
-
-            set
-            {
-                _SeansNo = value;
-            }
-        }
+       
 
         public int FilmID
         {
