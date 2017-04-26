@@ -34,12 +34,14 @@ namespace SINEMA
 
         private void FilmSeansSalon_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sinemaOtomasyonDataSet8.Seans' table. You can move, or remove it, as needed.
+            this.seansTableAdapter1.Fill(this.sinemaOtomasyonDataSet8.Seans);
             // TODO: This line of code loads data into the 'sinemaOtomasyonDataSet7.Salon' table. You can move, or remove it, as needed.
             this.salonTableAdapter.Fill(this.sinemaOtomasyonDataSet7.Salon);
             // TODO: This line of code loads data into the 'sinemaOtomasyonDataSet6.Film' table. You can move, or remove it, as needed.
             this.filmTableAdapter.Fill(this.sinemaOtomasyonDataSet6.Film);
             // TODO: This line of code loads data into the 'sinemaOtomasyonDataSet5.Seans' table. You can move, or remove it, as needed.
-            this.seansTableAdapter.Fill(this.sinemaOtomasyonDataSet5.Seans);
+            //this.seansTableAdapter.Fill(this.sinemaOtomasyonDataSet5.Seans);
             ekraniTemizle();
         }
 
@@ -48,15 +50,11 @@ namespace SINEMA
             ESEANS itemSeans = new ESEANS();
             EFILM itemFilm = new EFILM();
 
-            itemSeans.FilmID = Convert.ToInt32(cmbFilmAd.SelectedIndex);
-            itemSeans.SalonID = Convert.ToInt32(cmbSalon.SelectedIndex);
-            itemSeans.SeansNo = cmbSeans.SelectedIndex.ToString();
+            itemFilm = BLLADMIN.Film_Select(Convert.ToInt32(cmbFilmAd.SelectedValue));
+            itemSeans.FilmAd = itemFilm.FilmAd;
+            itemSeans.SalonAd = cmbSalon.SelectedItem.ToString();
+            itemSeans.SeansNo = cmbSeans.SelectedItem.ToString();
 
-            //itemFilm = BLLADMIN.Film_Select(Convert.ToInt32(cmbFilmAd.SelectedIndex));
-            //DateTime tarih = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[4].Value.ToString());
-            //tarih = itemFilm.YayinTarih;
-            //bool active = Convert.ToBoolean(dataGridView1.SelectedRows[0].Cells[5].Value);
-            //active = itemFilm.Active;
 
             if (BLLADMIN.Seans_Insert(itemSeans) > 0)
             {
@@ -68,6 +66,22 @@ namespace SINEMA
                 MessageBox.Show("Seans eklenemedi");
             }
 
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            int SeansID = 2;
+
+            if (BLLADMIN.Seans_Delete(SeansID))
+            {
+                MessageBox.Show("sİLİNDİ" );
+            }
+            MessageBox.Show("sİLİNMEDİ");
         }
     }
 }

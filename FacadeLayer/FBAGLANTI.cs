@@ -11,6 +11,6 @@ namespace FacadeLayer
 {
     public class FBAGLANTI
     {
-        public static readonly SqlConnection Baglan = new SqlConnection("Data Source=.;Initial Catalog=SinemaOtomasyon;Integrated Security=True");
+        public static  SqlConnection Baglan = new SqlConnection("Data Source=.;Initial Catalog=SinemaOtomasyon;Integrated Security=True");
     }
 }

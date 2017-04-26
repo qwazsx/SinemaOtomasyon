@@ -891,17 +891,15 @@ namespace FacadeLayer
 
             try
             {
-                SqlCommand com = new SqlCommand("Seans_Insert", FBAGLANTI.Baglan);
+                SqlCommand com = new SqlCommand("Seans_Insert",FBAGLANTI.Baglan);
                 com.CommandType = CommandType.StoredProcedure;
                 if (com.Connection.State != ConnectionState.Open)
                 {
                     com.Connection.Open();
                 }
                 com.Parameters.AddWithValue("SeansNo",item.SeansNo);
-                com.Parameters.AddWithValue("FilmID", item.FilmID);
-                com.Parameters.AddWithValue("SalonID", item.SalonID);
-                com.Parameters.AddWithValue("Tarih", item.Tarih);
-                com.Parameters.AddWithValue("Active", item.Active);
+                com.Parameters.AddWithValue("FilmAd", item.FilmAd);
+                com.Parameters.AddWithValue("SalonAd", item.SalonAd);
                 sonuc = com.ExecuteNonQuery();
                 com.Dispose();
                 FBAGLANTI.Baglan.Close();
@@ -929,10 +927,8 @@ namespace FacadeLayer
                 }
                 com.Parameters.AddWithValue("SeansID", item.SeansID);
                 com.Parameters.AddWithValue("SeansNo", item.SeansNo);
-                com.Parameters.AddWithValue("FilmID", item.FilmID);
-                com.Parameters.AddWithValue("SalonID", item.SalonID);
-                com.Parameters.AddWithValue("Tarih", item.Tarih);
-                com.Parameters.AddWithValue("Active", item.Active);
+                com.Parameters.AddWithValue("FilmAd", item.FilmAd);
+                com.Parameters.AddWithValue("SalonAd", item.SalonAd);
                 sonuc = com.ExecuteNonQuery() > 0;
                 com.Dispose();
                 FBAGLANTI.Baglan.Close();
@@ -993,10 +989,8 @@ namespace FacadeLayer
                     {
                         item.SeansID = Convert.ToInt32(dr["SeansID"]);
                         item.SeansNo = dr["SeansNo"].ToString();
-                        item.FilmID = Convert.ToInt32(dr["FilmID"]);
-                        item.SalonID = Convert.ToInt32(dr["SalonID"]);
-                        item.Tarih = Convert.ToDateTime(dr["Tarih"]);
-                        item.Active = Convert.ToBoolean(dr["Active"]);
+                        item.FilmAd = dr["FilmAd"].ToString();
+                        item.SalonAd = dr["SalonAd"].ToString();
                     }
                 }
                 dr.Close();
@@ -1033,10 +1027,8 @@ namespace FacadeLayer
 
                         item.SeansID = Convert.ToInt32(dr["SeansID"]);
                         item.SeansNo = dr["SeansNo"].ToString();
-                        item.FilmID = Convert.ToInt32(dr["FilmID"]);
-                        item.SalonID = Convert.ToInt32(dr["SalonID"]);
-                        item.Tarih = Convert.ToDateTime(dr["Tarih"]);
-                        item.Active = Convert.ToBoolean(dr["Active"]);
+                        item.FilmAd = dr["FilmAd"].ToString();
+                        item.SalonAd = dr["SalonAd"].ToString();
                         itemlist.Add(item);
                     }
                 }

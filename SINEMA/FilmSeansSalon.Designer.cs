@@ -33,35 +33,40 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbFilmAd = new System.Windows.Forms.ComboBox();
+            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sinemaOtomasyonDataSet6 = new SINEMA.SinemaOtomasyonDataSet6();
             this.cmbSalon = new System.Windows.Forms.ComboBox();
+            this.salonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sinemaOtomasyonDataSet7 = new SINEMA.SinemaOtomasyonDataSet7();
             this.cmbSeans = new System.Windows.Forms.ComboBox();
             this.btnYeniKayit = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sinemaOtomasyonDataSet5 = new SINEMA.SinemaOtomasyonDataSet5();
-            this.seansBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seansTableAdapter = new SINEMA.SinemaOtomasyonDataSet5TableAdapters.SeansTableAdapter();
             this.seansIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seansNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filmIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salonIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.sinemaOtomasyonDataSet6 = new SINEMA.SinemaOtomasyonDataSet6();
-            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sinemaOtomasyonDataSet5 = new SINEMA.SinemaOtomasyonDataSet5();
+            this.seansTableAdapter = new SINEMA.SinemaOtomasyonDataSet5TableAdapters.SeansTableAdapter();
             this.filmTableAdapter = new SINEMA.SinemaOtomasyonDataSet6TableAdapters.FilmTableAdapter();
-            this.sinemaOtomasyonDataSet7 = new SINEMA.SinemaOtomasyonDataSet7();
-            this.salonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salonTableAdapter = new SINEMA.SinemaOtomasyonDataSet7TableAdapters.SalonTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seansBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet6)).BeginInit();
+            this.sinemaOtomasyonDataSet8 = new SINEMA.SinemaOtomasyonDataSet8();
+            this.seansBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.seansTableAdapter1 = new SINEMA.SinemaOtomasyonDataSet8TableAdapters.SeansTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seansBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seansBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,6 +111,16 @@
             this.cmbFilmAd.TabIndex = 0;
             this.cmbFilmAd.ValueMember = "FilmID";
             // 
+            // filmBindingSource
+            // 
+            this.filmBindingSource.DataMember = "Film";
+            this.filmBindingSource.DataSource = this.sinemaOtomasyonDataSet6;
+            // 
+            // sinemaOtomasyonDataSet6
+            // 
+            this.sinemaOtomasyonDataSet6.DataSetName = "SinemaOtomasyonDataSet6";
+            this.sinemaOtomasyonDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cmbSalon
             // 
             this.cmbSalon.DataSource = this.salonBindingSource;
@@ -118,17 +133,25 @@
             this.cmbSalon.TabIndex = 1;
             this.cmbSalon.ValueMember = "SalonID";
             // 
+            // salonBindingSource
+            // 
+            this.salonBindingSource.DataMember = "Salon";
+            this.salonBindingSource.DataSource = this.sinemaOtomasyonDataSet7;
+            // 
+            // sinemaOtomasyonDataSet7
+            // 
+            this.sinemaOtomasyonDataSet7.DataSetName = "SinemaOtomasyonDataSet7";
+            this.sinemaOtomasyonDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cmbSeans
             // 
             this.cmbSeans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeans.FormattingEnabled = true;
             this.cmbSeans.Items.AddRange(new object[] {
-            "9:00 ",
-            "12:00",
-            "15:00",
-            "17:00",
-            "21:00",
-            "23:30"});
+            "9:00",
+            "11:00",
+            "15:30",
+            "19:30"});
             this.cmbSeans.Location = new System.Drawing.Point(90, 156);
             this.cmbSeans.Name = "cmbSeans";
             this.cmbSeans.Size = new System.Drawing.Size(258, 24);
@@ -165,6 +188,7 @@
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -175,6 +199,7 @@
             this.btnSil.TabIndex = 6;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // dataGridView1
             // 
@@ -199,20 +224,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(686, 222);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // sinemaOtomasyonDataSet5
-            // 
-            this.sinemaOtomasyonDataSet5.DataSetName = "SinemaOtomasyonDataSet5";
-            this.sinemaOtomasyonDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // seansBindingSource
-            // 
-            this.seansBindingSource.DataMember = "Seans";
-            this.seansBindingSource.DataSource = this.sinemaOtomasyonDataSet5;
-            // 
-            // seansTableAdapter
-            // 
-            this.seansTableAdapter.ClearBeforeFill = true;
             // 
             // seansIDDataGridViewTextBoxColumn
             // 
@@ -257,33 +268,41 @@
             this.activeDataGridViewCheckBoxColumn.Name = "activeDataGridViewCheckBoxColumn";
             this.activeDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
-            // sinemaOtomasyonDataSet6
+            // seansBindingSource
             // 
-            this.sinemaOtomasyonDataSet6.DataSetName = "SinemaOtomasyonDataSet6";
-            this.sinemaOtomasyonDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.seansBindingSource.DataMember = "Seans";
+            this.seansBindingSource.DataSource = this.sinemaOtomasyonDataSet5;
             // 
-            // filmBindingSource
+            // sinemaOtomasyonDataSet5
             // 
-            this.filmBindingSource.DataMember = "Film";
-            this.filmBindingSource.DataSource = this.sinemaOtomasyonDataSet6;
+            this.sinemaOtomasyonDataSet5.DataSetName = "SinemaOtomasyonDataSet5";
+            this.sinemaOtomasyonDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // seansTableAdapter
+            // 
+            this.seansTableAdapter.ClearBeforeFill = true;
             // 
             // filmTableAdapter
             // 
             this.filmTableAdapter.ClearBeforeFill = true;
             // 
-            // sinemaOtomasyonDataSet7
-            // 
-            this.sinemaOtomasyonDataSet7.DataSetName = "SinemaOtomasyonDataSet7";
-            this.sinemaOtomasyonDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salonBindingSource
-            // 
-            this.salonBindingSource.DataMember = "Salon";
-            this.salonBindingSource.DataSource = this.sinemaOtomasyonDataSet7;
-            // 
             // salonTableAdapter
             // 
             this.salonTableAdapter.ClearBeforeFill = true;
+            // 
+            // sinemaOtomasyonDataSet8
+            // 
+            this.sinemaOtomasyonDataSet8.DataSetName = "SinemaOtomasyonDataSet8";
+            this.sinemaOtomasyonDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // seansBindingSource1
+            // 
+            this.seansBindingSource1.DataMember = "Seans";
+            this.seansBindingSource1.DataSource = this.sinemaOtomasyonDataSet8;
+            // 
+            // seansTableAdapter1
+            // 
+            this.seansTableAdapter1.ClearBeforeFill = true;
             // 
             // FilmSeansSalon
             // 
@@ -308,13 +327,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Film Seans Salon";
             this.Load += new System.EventHandler(this.FilmSeansSalon_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seansBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seansBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinemaOtomasyonDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seansBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +369,8 @@
         private SinemaOtomasyonDataSet7 sinemaOtomasyonDataSet7;
         private System.Windows.Forms.BindingSource salonBindingSource;
         private SinemaOtomasyonDataSet7TableAdapters.SalonTableAdapter salonTableAdapter;
+        private SinemaOtomasyonDataSet8 sinemaOtomasyonDataSet8;
+        private System.Windows.Forms.BindingSource seansBindingSource1;
+        private SinemaOtomasyonDataSet8TableAdapters.SeansTableAdapter seansTableAdapter1;
     }
 }

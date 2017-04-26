@@ -10,17 +10,28 @@ namespace ENTITY_LAYER
     {
         private int _SeansID;
         private string _SeansNo;
+        private string _FilmAd;
+        private string _SalonAd;
 
-        public string SeansNo
+        public string SalonAd
         {
-            get { return _SeansNo; }
-            set { _SeansNo = value; }
+            get { return _SalonAd; }
+            set { _SalonAd = value; }
         }
-        private int _FilmID;
-        private int _SalonID;
-        private DateTime _Tarih;
-        private bool _Active;
 
+        public string FilmAd1
+        {
+            get { return _FilmAd; }
+            set { _FilmAd = value; }
+        }
+
+        public string FilmAd
+        {
+            get { return _FilmAd; }
+            set { _FilmAd = value; }
+        }
+        
+        
         public int SeansID
         {
             get
@@ -34,58 +45,14 @@ namespace ENTITY_LAYER
             }
         }
 
+       public string SeansNo
+        {
+            get { return _SeansNo; }
+            set { _SeansNo = value; }
+        }
+
+
        
-
-        public int FilmID
-        {
-            get
-            {
-                return _FilmID;
-            }
-
-            set
-            {
-                _FilmID = value;
-            }
-        }
-
-        public int SalonID
-        {
-            get
-            {
-                return _SalonID;
-            }
-
-            set
-            {
-                _SalonID = value;
-            }
-        }
-
-        public DateTime Tarih
-        {
-            get
-            {
-                return _Tarih;
-            }
-
-            set
-            {
-                _Tarih = value;
-            }
-        }
-
-        public bool Active
-        {
-            get
-            {
-                return _Active;
-            }
-
-            set
-            {
-                _Active = value;
-            }
-        }
+        
     }
 }
